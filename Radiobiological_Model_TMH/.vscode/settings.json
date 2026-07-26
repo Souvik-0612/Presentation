@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.nav": true,
+    "**/*.out": true,
+    "**/*.nm": true,
+    "**/*.synctex.gz": true,
+    "**/*.toc": true
+  }
+}
