@@ -7,6 +7,7 @@
 \usecolortheme{default}
 \justifying
 
+
 %------------------------------------------------------------
 %This block of code defines the information to appear in the
 %Title page
@@ -265,7 +266,8 @@
           \text{SF}_D &= e^{-D/\text{effective } D_0} \\
           \text{effective } D_0 &= -\frac{D}{\ln(\text{SF}_D)}
         \end{align*}
-	      \item <3-> 
+	      \item <3-> After $x$ fractions to total dose $xD$ Gy: 
+        $SF_x^D = e^{-xD/\text{effective } D_0}$
 	\end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
@@ -276,10 +278,117 @@
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \begin{itemize}
+    \item<1-> The linear-quadratic model was developed after the in vitro observation that  DNA damage follows a linear-quadratic relationship with dose D.
+    \item<2-> Lethal DNA aberrations = $\alpha D + \beta D^2$ = Cell Kill $$\boxed{SF_D = e^{-(\alpha D + \beta D^2)}}$$
+    \item<3-> Unlike the single-hit model, the LQ model accounts for two different types of  lethal hits which are based on known molecular mechanisms of DNA damage:
+    \begin{itemize}
+      \item<4-> Single-hit kill ($\alpha$) is unrepairable damage and is \textbf{independent} of fractionation  or dose rate. This corresponds to single-hit and \textbf{intra}-track accumulated damage.
+      \item<5-> Multi-hit kill ($\beta$) is repairable damage and is \textbf{dependent} on fractionation  or dose rate. This corresponds to double-hit and \textbf{inter}-track accumulated damage.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
 
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Continue: }
+  \begin{itemize}
+    \item The $\alpha/\beta$ ratio is the \textbf{dose} at which $\alpha$ kill and $\beta$ kill are equal.
+    \begin{itemize}
+      \item Low $\alpha/\beta$ ratio (“high repair”) tissues are relatively resistant at small fraction  size and relatively sensitive at large fraction size.
+      \item High $\alpha/\beta$ ratio (“low repair”) tissues are relatively sensitive at small fraction  size and relatively resistant at large fraction size.
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \includegraphics[height = 4 cm]{LQ.png}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Alpha-Beta Model and Dose Fractionation}
+  \begin{itemize}
+    \item LQ model is widely used in radiotherapy to predict the effects of different fractionation schemes on both tumor and normal tissues.
+    \item Suppose we have $n$ no of fractions of dose $d$ each, then the total dose $D = nd$. The surviving fraction after $n$ fractions is given by:
+    \begin{align*}
+      \text{SF}_n &= e^{-n(\alpha d + \beta d^2)} \\
+      \implies - \frac{1}{nd} &= \frac{\alpha}{\ln(\text{SF}_n)} + \frac{\beta d}{ln(\text{SF}_n)} \\
+    \end{align*}
+    \item Plot of dose per fraction $d$ versus $- \frac{1}{nd}$ gives a straight line with slope $\beta/ln(\text{SF}_n)$ and y-intercept $ln(\text{SF}_n)$. The ratio of intercept to slope gives $\alpha/\beta$.
+    \item Such values are obtained for a variety of tissues and tumors, and are used to guide clinical decision-making regarding fractionation schemes.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{$\alpha/\beta$ Ratios of Tissues and Tumor}
+  \begin{itemize}
+    \item Most acute-reacting tissues are believed to have an $\alpha/\beta$ ratio $\approx$ 10.
+    \item Most late-reacting tissues are believed to have an $\alpha/\beta$ ratio $\approx$ 3 or less.
+    \item CNS tissue (brain, cord) is believed to have an $\alpha/\beta$ ratio $\approx$ 1-2.
+    \item Most tumors are believed to have an $\alpha/\beta$ ratio $\geq$ 10.
+    \item Some low $\alpha/\beta$ tumors may have an $\alpha/\beta$ ratio $\approx$ 1.5-4.Breast and Prostate are the “classic” low $\alpha/\beta$ tumors.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Biologically Effective Dose}
+  \begin{itemize}
+    \item One advantage of the linear-quadratic model is that it is easy to calculate effective doses for different fraction sizes.
+    \begin{block}{Definition}
+      Biologically effective dose (BED) is an extrapolated dose given over infinitely many fractions.
+    \end{block}
+    \item For n fractions of d dose per fraction:
+    \begin{align*}
+      \text{BED}_{\alpha/\beta} &= nd\left(1 + \frac{d}{\alpha/\beta}\right) \\
+      &= D\left(1 + \frac{d}{\alpha/\beta}\right)
+    \end{align*}
+    \item BED = total physical dose $\times$ relative effectiveness of that dose.
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Practical Applications}
+  \begin{alertblock}{Problem 1}
+    If a treatment is planned for 70 Gy/ 35 fractions, but due to departmental contraints, we need to complete it in 25 fractions. What is the new dose per fraction for same tumor control with $\alpha/\beta = 10$?
+  \end{alertblock}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{EQuivalent Dose in 2 Gy fractions (EQD$_2$)}
+  \begin{itemize}
+    \item EQD$_2$ is the dose in 2 Gy fractions that would produce the same biological effect as the actual treatment.
+    \item For n fractions of d dose per fraction:
+    \begin{align*}
+      \text{EQD}_2 &= \frac{BED}{1 + \frac{2}{\alpha/\beta}} \\
+     \implies \text{EQD}_2 &= D\left(\frac{d + \alpha/ \beta}{2 + \alpha/ \beta}\right)
+    \end{align*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Practical Applications}
+  \begin{alertblock}{Problem 2}
+    You want to treat a lung cancer to 60 Gy in 2 Gy fractions, but the first five  fractions are given at 3 Gy/fx due to SVC syndrome. Assuming $\alpha/\beta$ = 3, how much additional dose should you deliver at 2 Gy per  fraction?
+  \end{alertblock}
+
+\end{frame}
 
 
 \section{Nominal Standard Dose (NSD)}
+
+
 \section{Cumulative Radiation Effect (CRE)}
 \section{Time-Dose-Fractionation (TDF)}
 \section{Practical Applications}
