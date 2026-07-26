@@ -232,6 +232,53 @@
 
 \end{frame}
 
+
+\begin{frame}
+  \frametitle{Fractionated Radiation and Effective $D_0$}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item<1-> A fractionated radiation survival curve has a shallower slope compared to a  single-fraction survival curve.
+	      \item<2-> Assuming complete repair in between fractions, the shoulder is repeated with  each fraction.
+	      \item <3-> $D_0$ versus effective $D_0$. When radiation is fractionated, you need much more dose to achieve the same amount of cell kill. Therefore, effective $D_0$ is always larger than $D_0$
+	\end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics<2->[width=\textwidth]{fractionation.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Fractionated Radiation and Effective $D_0$}
+  \framesubtitle{Continue}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item<1-> The slope of a fractionated survival curve is called effective $D_0$.
+	      \item<2-> For a single fraction of $D$ Gy with a surviving fraction of $\text{SF}_D$:
+	      \begin{align*}
+          \text{SF}_D &= e^{-D/D_0} \\
+          \text{SF}_D &= e^{-D/\text{effective } D_0} \\
+          \text{effective } D_0 &= -\frac{D}{\ln(\text{SF}_D)}
+        \end{align*}
+	      \item <3-> 
+	\end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics<1->[width=\textwidth]{fractionation.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
 \section{Nominal Standard Dose (NSD)}
 \section{Cumulative Radiation Effect (CRE)}
 \section{Time-Dose-Fractionation (TDF)}
