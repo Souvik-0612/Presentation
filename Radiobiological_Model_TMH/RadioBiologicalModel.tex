@@ -145,18 +145,18 @@
     \begin{itemize}
       \item <2-> At an average of $x$ surviving tumor cells per patient:
         \begin{itemize}
-          \item<3-> $e^{-x}$ cells survive (no hits).
-          \item <4->$1 - e^{-x}$ cells die (at least 1 hit).
+          \item<2-> $e^{-x}$ cells survive (no hits).
+          \item <2->$1 - e^{-x}$ cells die (at least 1 hit).
         \end{itemize}
-      \item <5-> Based on this equation,
+      \item <3-> Based on this equation,
         \begin{itemize}
-          \item <6-> 1 tumor cell per pt.: TCP = 0.37
-          \item <7-> 2 tumor cell per pt.: TCP = 0.14
-          \item <8-> 3 tumor cells per pt.: TCP = 0.05
-          \item <9-> 4 tumor cells per pt.: TCP = 0.02
-          \item <10-> 5 tumor cells per pt.: TCP = 0.01
+          \item <3-> 1 tumor cell per pt.: TCP = 0.37
+          \item <3-> 2 tumor cell per pt.: TCP = 0.14
+          \item <3-> 3 tumor cells per pt.: TCP = 0.05
+          \item <3-> 4 tumor cells per pt.: TCP = 0.02
+          \item <3-> 5 tumor cells per pt.: TCP = 0.01
         \end{itemize}
-        \begin{block}{Note}<11->
+        \begin{block}{Note}<4->
           To achieve a certain TCP, you should aim for a tumor cell  survival of (1 - TCP).
         \end{block}
     \end{itemize}
@@ -388,15 +388,46 @@
 
 \begin{frame}{MCQ Example}
 
-\textbf{Question:} Which particle has no electric charge?
+\textbf{Question 1:} Which of the following remains unaltered while changing the plan from fractionated radiotherapy to brachytherapy?
 
 \begin{enumerate}
-    \item<1> Electron
-    \item<1> Proton
-    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries Neutron}}{Neutron}
-    \item<1> Positron
+    \item<1> Total Dose
+    \item<1> Dose per fraction
+    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries BED}}{BED}
+    \item<1> Relative effetiveness of that dose
 \end{enumerate}
+\end{frame}
 
+\begin{frame}{MCQ Example}
+
+\textbf{Question 2:} A tumour containing $10^8$ cells is inactivated by radiation with a mean lethal dose of $D_0 = 1.8$ Gy. What is the number of surviving tumour cells after a radiation dose of 45 Gy?
+
+\begin{enumerate}
+    \item<1> $1.2 \times 10^{-3}$
+    \item<1> $1.4 \times 10^{-4}$
+    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries $1.4 \times 10^{-3}$}}{$1.4 \times 10^{-3}$}
+    \item<1> $1.2 \times 10^{-4}$
+\end{enumerate}
+\begin{block}{Solution}<2->
+    The number of surviving cells is given by:
+    $$N = N_0 e^{-D/D_0}$$
+    where $N_0$ is the initial number of cells, $D$ is the dose, and $D_0$ is the mean lethal dose.
+    Substituting the values, we get:
+    $$N = 10^8 e^{-45/1.8} \approx 1.4 \times 10^{-3}$$
+
+\end{block}
+\end{frame}
+
+\begin{frame}{MCQ Example}
+
+\textbf{Question 3:} It is required to replace an LDR implant of 60 Gy at 0.37 Gy/hr by a 3 fraction HDR implant. What dose/fraction should be used to keep the effect on the tumour the same, assuming $\alpha/\beta = 15$ and $\mu = 1.4$ hr$^{-1}$?
+
+\begin{enumerate}
+    \item<1> 10.25 Gy
+    \item<1> 11.32 Gy
+    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries 11.65}}{11.65}
+    \item<1> 10.92
+\end{enumerate}
 \end{frame}
 
 
