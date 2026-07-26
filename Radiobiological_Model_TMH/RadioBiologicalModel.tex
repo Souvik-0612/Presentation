@@ -6,7 +6,8 @@
 \usetheme{Madrid}
 \usecolortheme{default}
 \justifying
-
+\usepackage{xcolor}
+\definecolor{CorrectGreen}{RGB}{0,100,0} % Dark Green
 
 %------------------------------------------------------------
 %This block of code defines the information to appear in the
@@ -15,7 +16,6 @@
 \title[Radiobiological Models] %optional
 {Introduction to Radiobiological Models}
 
-\subtitle{A short story}
 
 \author[Souvik Das] % (optional)
 {\includegraphics[height=2cm]{Tata_Memorial_Center_logo.jpg} \\ Souvik Das}
@@ -386,12 +386,26 @@
 \end{frame}
 
 
+\begin{frame}{MCQ Example}
+
+\textbf{Question:} Which particle has no electric charge?
+
+\begin{enumerate}
+    \item<1> Electron
+    \item<1> Proton
+    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries Neutron}}{Neutron}
+    \item<1> Positron
+\end{enumerate}
+
+\end{frame}
+
+
+
 \section{Nominal Standard Dose (NSD)}
 
 
 \section{Cumulative Radiation Effect (CRE)}
 \section{Time-Dose-Fractionation (TDF)}
-\section{Practical Applications}
 
 
 \end{document}
