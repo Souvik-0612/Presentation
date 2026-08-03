@@ -229,7 +229,19 @@
 \begin{frame}
   \frametitle{Single-Hit, Multitarget Model}
   \framesubtitle{Advantages and Disadvantages}
-  
+  \begin{itemize}
+    \item <1-> Advantages:
+    \begin{itemize}
+      \item <2-> The high-dose portion of the curve is a straight line.
+      \item <3-> This straight-line component correlates well with cell-culture experiments.
+  \end{itemize}
+  \item <4-> Disadvantages:
+  \begin{itemize}
+    \item <5-> The low-dose portion of the curve greatly underestimates cell kill.
+    \item <6-> Unlike the linear-quadratic model, the single-hit model is not based on a  molecular mechanism.
+    \item <7-> Unlike the linear-quadratic model, there is not a simple equation for “equivalent dose” given a daily fractionation schedule.
+  \end{itemize}
+  \end{itemize}
 
 \end{frame}
 
@@ -476,11 +488,11 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-    \item An empiric equation based on the Strandquist Plots:
+    \item<1-> An empiric equation based on the Strandquist Plots:
     \begin{itemize}
-      \item Back in the 1930s-1940s, Strandquist treated a bunch of skin cancers and  plotted radium exposure versus skin erythema, desquamation, necrosis, and tumor cure.
-      \item He found that the relationship between total dose and overall treatment time  formed a series of parallel lines on a logarithmic chart.
-      \item The Strandquist plots (approximate). These parallel lines represent various skin-related endpoints such as erythema, desquamation, and necrosis.
+      \item<2-> Back in the 1930s-1940s, Strandquist treated a bunch of skin cancers and  plotted radium exposure versus skin erythema, desquamation, necrosis, and tumor cure.
+      \item<3-> He found that the relationship between total dose and overall treatment time  formed a series of parallel lines on a logarithmic chart.
+      \item<4-> The Strandquist plots (approximate). These parallel lines represent various skin-related endpoints such as erythema, desquamation, and necrosis.
     \end{itemize}
   \end{itemize}
     \end{column}
@@ -495,11 +507,11 @@
   \frametitle{Nominal Standard Dose (NSD)}
   \framesubtitle{Continue}
   \begin{itemize}
-    \item Unlike newer models, the Ellis NSD has no theoretical basis whatsoever; it is an  empiric \textbf{“curve fitting”} model.
-    \item The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
-    \item The NSD makes no attempt to predict late toxicity.
-    \item There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
-    \item For $N$ fractions of total dose $D$(in rads) delivered over $T$ days:
+    \item<1-> Unlike newer models, the Ellis NSD has no theoretical basis whatsoever; it is an  empiric \textbf{“curve fitting”} model.
+    \item<2-> The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
+    \item<3-> The NSD makes no attempt to predict late toxicity.
+    \item<4-> There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
+    \item<5-> For $N$ fractions of total dose $D$(in rads) delivered over $T$ days:
     $$D = \text{NSD} \times N^{0.24} \times T^{0.11}$$
   \end{itemize}
 \end{frame}
@@ -508,9 +520,9 @@
 \begin{frame}
   \frametitle{Cumulative Radiation Effect (CRE)}
   \begin{itemize}
-    \item NSD formula does not say anything about tumor responce and normal tissue tolerace due to part of the treatment schedule which had already been completed, might have reached some level of tolerance. 
-    \item Kirk et. al. extended the NSD concept to the cumulative radiation effect (CRE) for such type of schedules. This is based on sub-tolerance of normal tissue which was subjected to irradiation.
-    \item The partial tolerances are additive in nature,
+    \item<1-> NSD formula does not say anything about tumor responce and normal tissue tolerace due to part of the treatment schedule which had already been completed, might have reached some level of tolerance. 
+    \item<2-> Kirk et. al. extended the NSD concept to the cumulative radiation effect (CRE) for such type of schedules. This is based on sub-tolerance of normal tissue which was subjected to irradiation.
+    \item<3-> The partial tolerances are additive in nature,
     $${PT} = \sum {PT}_i$$ 
   \end{itemize}
 \end{frame}
@@ -521,6 +533,8 @@
     \item Orton and Ellis(1973) developed time dose and fractionation concept to make use of partial tolerance more practicable. The TDF for fractionated beam therapy was given by:
     $$\text{TDF} = d^{1.538} \times n \times x^{-0.169} \times 10^{-3}$$
   \end{itemize}
+  where d = dose per fraction, n = number of fractions, x = t/n, t = overall treatment time in days.
+
 \end{frame}
 
 
