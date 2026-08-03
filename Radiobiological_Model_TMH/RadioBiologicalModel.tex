@@ -353,6 +353,34 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Treatment Interruption}
+  \framesubtitle{Consequences}
+
+  \begin{block}{Explain the consequences of unplanned gaps on tumour  cells during radiotherapy treatment.}
+    \begin{itemize}
+      \item \textbf{Repopulation} of tumour cells may occur.
+      \item The unplanned gap  during radiotherapy will cause the cells within a \textbf{tumour to proliferate} and leads to an increase in the number of cells that the radiation needs to kill.
+      \item There is evidence that \textbf{repopulation can be accelerated in the treated tumours} so that this effect can be significant.
+      \item Thus an increase of overall treatment time (due to the gap) will decrease the efficacy of radiotherapy.
+    \end{itemize}
+   
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Treatment Interruption}
+  \framesubtitle{Recommendations}
+
+  \begin{block}{Give the recommendations about how to compensate for  unscheduled gaps in radiotherapy treatment.}
+    \begin{enumerate}
+      \item<2-> The main recommendation is to compensate for a gap by  \textbf{continuing to deliver the same number of fractions in the same overall time}, by inserting the missed fractions (using the original dose per fraction) either during weekends or as extra fraction on previously treatment days.
+      \item<3-> When multiple fractions are given in a day, the interval between them should be \textbf{at least 6 hours}.
+      \item<4-> If the break in treatment occurs early in the schedule, then two fractions per day can be used. However, if there are not enough days left on the original schedule to catch up using two fractions on each remaining days, three fractions per day can be considered subjected to the availability of resources.
+    \end{enumerate}
+   
+  \end{block}
+\end{frame}
 
 \begin{frame}
   \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
@@ -382,9 +410,27 @@
   \begin{alertblock}{Problem 2}
     You want to treat a lung cancer to 60 Gy in 2 Gy fractions, but the first five  fractions are given at 3 Gy/fx due to SVC syndrome. Assuming $\alpha/\beta$ = 3, how much additional dose should you deliver at 2 Gy per  fraction?
   \end{alertblock}
-
 \end{frame}
 
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Practical Applications}
+  \begin{alertblock}{Problem 3}
+    A 40-year-old lady with colorectal cancer is being treated with radio therapy. A dose of 45 Gy in 25 daily fractions over 5 weeks is planned. After ten fractions, treatment was cancelled for five fractions due to machine breakdown. It was planned to deliver the isoeffective tumour dose by increasing the size of the ten fractions to finish the treatment as scheduled. By using the "equivalent dose" method, calculate required dose per fraction for the last ten fractions. Assume $\alpha/\beta$ = 10 Gy for colorectal cancer.
+
+
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
+  \framesubtitle{Practical Applications}
+  \begin{alertblock}{Problem 4}
+    To deliver isoeffective tumor dose by increasing the size of last two fraction on Thursday and Friday, what is the required dose? ($\alpha/\beta$ of the tumor is 10 Gy)
+
+
+  \end{alertblock}
+\end{frame}
 
 \begin{frame}{MCQ Example}
 
@@ -433,7 +479,19 @@
 
 
 \section{Nominal Standard Dose (NSD)}
-
+\begin{frame}
+  \frametitle{Need for time-dose models}
+  \begin{itemize}
+    \item The aim of the radiotherist is to obtain high probability of tumor control with minimal normal tissue complications.
+    \item Since typical treatment plans are quite complicated to compare so with the help of this models. the treatment regimes can be easily modified.
+    \item Time dose relationship have been evolved in different forms like graphical, tabular and mathematical forms. The most commonly used models are:
+    \begin{itemize}
+      \item Nominal Standard Dose (NSD)
+      \item Cumulative Radiation Effect (CRE)
+      \item Time Dose Fractionation (TDF)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
 
 \begin{frame}
   \frametitle{Nominal Standard Dose (NSD)}
@@ -463,7 +521,7 @@
     \item The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
     \item The NSD makes no attempt to predict late toxicity.
     \item There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
-    \item For $N$ fractions of total dose $D$ delivered over $T$ days:
+    \item For $N$ fractions of total dose $D$(in rads) delivered over $T$ days:
     $$D = \text{NSD} \times N^{0.24} \times T^{0.11}$$
   \end{itemize}
 \end{frame}
@@ -472,13 +530,27 @@
 \begin{frame}
   \frametitle{Cumulative Radiation Effect (CRE)}
   \begin{itemize}
-    \item NSD formula does not account for the fact that different tissues have different repair capacities. The CRE model was developed to address this limitation.
-    \item The CRE model is based on the concept of \textbf{cumulative radiation effect}, which is a measure of the total biological effect of radiation on a tissue or organ.
-    \item The CRE model uses a different exponent for each tissue type, which reflects the tissue's repair capacity. For example, the exponent for skin is 0.24, while the exponent for spinal cord is 0.11.
-    \item The CRE model can be used to predict the biological effect of different fractionation schemes on both tumor and normal tissues.
+    \item NSD formula does not say anything about tumor responce and normal tissue tolerace due to part of the treatment schedule which had already been completed, might have reached some level of tolerance. 
+    \item Kirk et. al. extended the NSD concept to the cumulative radiation effect (CRE) for such type of schedules. This is based on sub-tolerance of normal tissue which was subjected to irradiation.
+    \item The partial tolerances are additive in nature,
+    $${PT} = \sum {PT}_i$$ 
   \end{itemize}
 \end{frame}
 \section{Time-Dose-Fractionation (TDF)}
+\begin{frame}
+  \frametitle{Time-Dose-Fractionation (TDF)}
+  \begin{itemize}
+    \item Orton and Ellis(1973) developed time dose and fractionation concept to make use of partial tolerance more practicable. The TDF for fractionated beam therapy was given by:
+    $$\text{TDF} = d^{1.538} \times n \times x^{-0.169} \times 10^{-3}$$
+  \end{itemize}
+\end{frame}
 
+
+\begin{frame}
+  \frametitle{Link of this document}
+  \begin{figure}
+    \includegraphics[width=0.5\textwidth]{QR.pdf}
+  \end{figure}
+\end{frame}
 
 \end{document}
