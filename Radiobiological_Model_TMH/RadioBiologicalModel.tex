@@ -324,14 +324,14 @@
   \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
   \framesubtitle{Alpha-Beta Model and Dose Fractionation}
   \begin{itemize}
-    \item LQ model is widely used in radiotherapy to predict the effects of different fractionation schemes on both tumor and normal tissues.
-    \item Suppose we have $n$ no of fractions of dose $d$ each, then the total dose $D = nd$. The surviving fraction after $n$ fractions is given by:
+    \item<1-> LQ model is widely used in radiotherapy to predict the effects of different fractionation schemes on both tumor and normal tissues.
+    \item<2-> Suppose we have $n$ no of fractions of dose $d$ each, then the total dose $D = nd$. The surviving fraction after $n$ fractions is given by:
     \begin{align*}
       \text{SF}_n &= e^{-n(\alpha d + \beta d^2)} \\
       \implies - \frac{1}{nd} &= \frac{\alpha}{\ln(\text{SF}_n)} + \frac{\beta d}{ln(\text{SF}_n)} \\
     \end{align*}
-    \item Plot of dose per fraction $d$ versus $- \frac{1}{nd}$ gives a straight line with slope $\beta/ln(\text{SF}_n)$ and y-intercept $ln(\text{SF}_n)$. The ratio of intercept to slope gives $\alpha/\beta$.
-    \item Such values are obtained for a variety of tissues and tumors, and are used to guide clinical decision-making regarding fractionation schemes.
+    \item<3-> Plot of dose per fraction $d$ versus $- \frac{1}{nd}$ gives a straight line with slope $\beta/ln(\text{SF}_n)$ and y-intercept $ln(\text{SF}_n)$. The ratio of intercept to slope gives $\alpha/\beta$.
+    \item<4-> Such values are obtained for a variety of tissues and tumors, and are used to guide clinical decision-making regarding fractionation schemes.
   \end{itemize}
 \end{frame}
 
