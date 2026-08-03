@@ -459,12 +459,25 @@
   \frametitle{Nominal Standard Dose (NSD)}
   \framesubtitle{Continue}
   \begin{itemize}
-    \item 
+    \item Unlike newer models, the Ellis NSD has no theoretical basis whatsoever; it is an  empiric \textbf{“curve fitting”} model.
+    \item The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
+    \item The NSD makes no attempt to predict late toxicity.
+    \item There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
+    \item For $N$ fractions of total dose $D$ delivered over $T$ days:
+    $$D = \text{NSD} \times N^{0.24} \times T^{0.11}$$
   \end{itemize}
-
 \end{frame}
 
 \section{Cumulative Radiation Effect (CRE)}
+\begin{frame}
+  \frametitle{Cumulative Radiation Effect (CRE)}
+  \begin{itemize}
+    \item NSD formula does not account for the fact that different tissues have different repair capacities. The CRE model was developed to address this limitation.
+    \item The CRE model is based on the concept of \textbf{cumulative radiation effect}, which is a measure of the total biological effect of radiation on a tissue or organ.
+    \item The CRE model uses a different exponent for each tissue type, which reflects the tissue's repair capacity. For example, the exponent for skin is 0.24, while the exponent for spinal cord is 0.11.
+    \item The CRE model can be used to predict the biological effect of different fractionation schemes on both tumor and normal tissues.
+  \end{itemize}
+\end{frame}
 \section{Time-Dose-Fractionation (TDF)}
 
 
