@@ -25,7 +25,7 @@
   Tata Memorial Hospital, Mumbai
 }
 
-\date[\today] % (optional)
+\date[August 3, 2026] % (optional)
 
 
 %End of title page configuration block
@@ -71,9 +71,9 @@
 
 
 \begin{itemize}
- \item<1-> The target of radiation for the purpose of therapy is the \textbf{DNA}.
- \item<2-> Post-irradiation \textbf{cell survival} as a function of radiation dose can be \textbf{biophysically modeled} in several different ways.
- \item<3-> \textbf{Poisson statistics} are used for the basis for survival equations.
+ \item The target of radiation for the purpose of therapy is the \textbf{DNA}.
+ \item Post-irradiation \textbf{cell survival} as a function of radiation dose can be \textbf{biophysically modeled} in several different ways.
+ \item \textbf{Poisson statistics} are used for the basis for survival equations.
 
 \end{itemize}
 \end{frame}
@@ -89,7 +89,7 @@
   \end{figure}
 
   \begin{itemize}
-    \item <2-> Poisson statistics describe a large number of random events happening to a  large number of subjects, averaging out to a small number of events per subject.
+    \item Poisson statistics describe a large number of random events happening to a  large number of subjects, averaging out to a small number of events per subject.
   \end{itemize}
 \end{frame}
 
@@ -97,11 +97,11 @@
   \frametitle{Mathematical Modeling}
   \framesubtitle{Poisson Statistics}
   \begin{itemize}
-    \item <1-> If $x$ is the average number of drops per square, then the probability of a square being hit by $k$ drops is given by:
+    \item If $x$ is the average number of drops per square, then the probability of a square being hit by $k$ drops is given by:
       $$P(k) = \frac{x^k e^{-x}}{k!}$$
-    \item <2-> The probability of a square being dry is given by:
+    \item The probability of a square being dry is given by:
       $$P(0) = e^{-x}$$
-    \item <3-> The probability of a square being wet is given by:
+    \item The probability of a square being wet is given by:
   
       $$P(\text{wet}) = 1 - e^{-x}$$
   \end{itemize}
@@ -114,22 +114,22 @@
   \frametitle{Poisson Distribution}
   \framesubtitle{Cell Survival}
   \begin{itemize}
-    \item <1-> The Poisson model is used for surviving fraction (\textbf{SF}) of cells:
+    \item The Poisson model is used for surviving fraction (\textbf{SF}) of cells:
     \begin{itemize}
-      \item <2-> At an average of $x$ lethal hits per cell:
+      \item At an average of $x$ lethal hits per cell:
         \begin{itemize}
-          \item<3-> $e^{-x}$ cells survive (no hits).
-          \item <4->$1 - e^{-x}$ cells die (at least 1 hit).
+          \item $e^{-x}$ cells survive (no hits).
+          \item $1 - e^{-x}$ cells die (at least 1 hit).
         \end{itemize}
-      \item <5-> Based on this equation,
+      \item Based on this equation,
         \begin{itemize}
-          \item <6-> 1 hit kills 63\% of cells. SF = 0.37
-          \item <7-> 2 hits kills 86\% of cells. SF = 0.14
-          \item <8-> 3 hits kills 95\% of cells. SF = 0.05
-          \item <9-> 4 hits kills 98\% of cells. SF = 0.02
-          \item <10-> 5 hits kills 99\% of cells. SF = 0.01
+          \item 1 hit kills 63\% of cells. SF = 0.37
+          \item 2 hits kills 86\% of cells. SF = 0.14
+          \item 3 hits kills 95\% of cells. SF = 0.05
+          \item 4 hits kills 98\% of cells. SF = 0.02
+          \item 5 hits kills 99\% of cells. SF = 0.01
         \end{itemize}
-        \begin{block}{Note}<11->
+        \begin{block}{Note}
           $D_0$ is defined as the radiation dose resulting in 37\% survival. This is assumed  to be equal to the radiation dose necessary to cause one \textbf{lethal} hit per cell.
         \end{block}
     \end{itemize}
@@ -141,22 +141,22 @@
   \frametitle{Poisson Distribution}
   \framesubtitle{Tumor Control Probability (TCP)}
   \begin{itemize}
-    \item <1-> The Poisson model is used for Tumor Control Probability (\textbf{TCP}) of cells:
+    \item The Poisson model is used for Tumor Control Probability (\textbf{TCP}) of cells:
     \begin{itemize}
-      \item <2-> At an average of $x$ surviving tumor cells per patient:
+      \item At an average of $x$ surviving tumor cells per patient:
         \begin{itemize}
-          \item<2-> $e^{-x}$ cells survive (no hits).
-          \item <2->$1 - e^{-x}$ cells die (at least 1 hit).
+          \item $e^{-x}$ cells survive (no hits).
+          \item $1 - e^{-x}$ cells die (at least 1 hit).
         \end{itemize}
-      \item <3-> Based on this equation,
+      \item Based on this equation,
         \begin{itemize}
-          \item <3-> 1 tumor cell per pt.: TCP = 0.37
-          \item <3-> 2 tumor cell per pt.: TCP = 0.14
-          \item <3-> 3 tumor cells per pt.: TCP = 0.05
-          \item <3-> 4 tumor cells per pt.: TCP = 0.02
-          \item <3-> 5 tumor cells per pt.: TCP = 0.01
+          \item 1 tumor cell per pt.: TCP = 0.37
+          \item 2 tumor cell per pt.: TCP = 0.14
+          \item 3 tumor cells per pt.: TCP = 0.05
+          \item 4 tumor cells per pt.: TCP = 0.02
+          \item 5 tumor cells per pt.: TCP = 0.01
         \end{itemize}
-        \begin{block}{Note}<4->
+        \begin{block}{Note}
           To achieve a certain TCP, you should aim for a tumor cell  survival of (1 - TCP).
         \end{block}
     \end{itemize}
@@ -169,11 +169,11 @@
   \frametitle{Target theory}
   \framesubtitle{Single-Target, Single-Hit Model}
   \begin{itemize}
-    \item <1-> It assumes that each cell has a \textbf{single critical target}, and that a single hit to this target is sufficient to cause cell death.
-    \item <2-> The survival fraction (SF) is given by:
+    \item It assumes that each cell has a \textbf{single critical target}, and that a single hit to this target is sufficient to cause cell death.
+    \item The survival fraction (SF) is given by:
       $$SF = e^{-D/D_0}$$
       where $D$ is the dose and $D_0$ is the dose required to reduce the surviving fraction to 37\%.
-    \item <3-> This type of survival curve is seen for mammalian cells which are irradiated  with \textbf{high LET} radiation such as alpha particles or carbon ions; very \textbf{radiation-sensitive} cells like lymphocytes and bone marrow cells; cells that have major defects in DNA doublestrand break repair; are synchronized in M phase; and for cells that have DNA double-strand break repair inhibited by chemical or gene knockdown.
+    \item This type of survival curve is seen for mammalian cells which are irradiated  with \textbf{high LET} radiation such as alpha particles or carbon ions; very \textbf{radiation-sensitive} cells like lymphocytes and bone marrow cells; cells that have major defects in DNA doublestrand break repair; are synchronized in M phase; and for cells that have DNA double-strand break repair inhibited by chemical or gene knockdown.
   \end{itemize}
 \end{frame}
 
@@ -182,11 +182,11 @@
   \frametitle{Target theory}
   \framesubtitle{Multitarget, Single-Hit Model}
   \begin{itemize}
-    \item <1-> This model assumes that each cell has multiple independent targets, all of which  must be hit to kill the cell.
-    \item <2-> For a single dose D, the survival fraction (SF) is given by:
+    \item This model assumes that each cell has multiple independent targets, all of which  must be hit to kill the cell.
+    \item For a single dose D, the survival fraction (SF) is given by:
       $$SF = 1 - (1 - e^{-D/D_0})^n$$
       where $D$ is the dose, $D_0$ is the dose required to reduce the surviving fraction to 37\%, and $n$ is the number of targets.
-    \item <3-> This type of survival curve is seen for mammalian cells which are irradiated with \textbf{low LET} radiation such as X-rays or gamma rays; cells that are \textbf{radiation-resistant} like fibroblasts and epithelial cells; cells that have a normal DNA double-strand break repair; and for cells that are synchronized in G1 or S phase.
+    \item This type of survival curve is seen for mammalian cells which are irradiated with \textbf{low LET} radiation such as X-rays or gamma rays; cells that are \textbf{radiation-resistant} like fibroblasts and epithelial cells; cells that have a normal DNA double-strand break repair; and for cells that are synchronized in G1 or S phase.
   \end{itemize}
 \end{frame}
 
@@ -207,19 +207,19 @@
   \frametitle{Target theory}
   \framesubtitle{Multitarget, Single-Hit Model}
   \begin{itemize}
-    \item<1-> The high-dose portion of the curve is actually a straight line:
+    \item The high-dose portion of the curve is actually a straight line:
     \begin{itemize}
-      \item<2-> $D_0$ is defined as the additional dose required to reduce surviving fraction to  37\% of what it was before.
-      \begin{alertblock}{Important to note}<3->
+      \item $D_0$ is defined as the additional dose required to reduce surviving fraction to  37\% of what it was before.
+      \begin{alertblock}{Important to note}
         Do not measure $D_0$ at SF = 0.37 if the survival curve has a shoulder. Remember that $D_0$ applies to the high-dose portion of the curve in that case! Instead, measure the difference in dose between SF = 0.1 and SF = 0.037.
       \end{alertblock}
-      \item<4-> $D_0$ is a measure of the cell’s inherent radiation sensitivity. Most $D_0$ values are somewhere around 1 Gy.
-      \item<5-> $D_{10}$ = $2.3 \times D_0$ = a dose that will reduce surviving fraction by tenfold (i.e., from  SF = 0.1 to SF = 0.01).
+      \item $D_0$ is a measure of the cell’s inherent radiation sensitivity. Most $D_0$ values are somewhere around 1 Gy.
+      \item $D_{10}$ = $2.3 \times D_0$ = a dose that will reduce surviving fraction by tenfold (i.e., from  SF = 0.1 to SF = 0.01).
     \end{itemize}
-\item<6-> The low-dose portion of the curve is known as the “shoulder”:
+\item The low-dose portion of the curve is known as the “shoulder”:
     \begin{itemize}
-      \item<7-> $D_q$ tells you how wide the shoulder is.
-      \item <8->$D_q$ is a measure of the cell's repair capacity. More repair means a larger $D_q$  and a larger shoulder
+      \item $D_q$ tells you how wide the shoulder is.
+      \item $D_q$ is a measure of the cell's repair capacity. More repair means a larger $D_q$  and a larger shoulder
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -230,16 +230,16 @@
   \frametitle{Single-Hit, Multitarget Model}
   \framesubtitle{Advantages and Disadvantages}
   \begin{itemize}
-    \item <1-> Advantages:
+    \item Advantages:
     \begin{itemize}
-      \item <2-> The high-dose portion of the curve is a straight line.
-      \item <3-> This straight-line component correlates well with cell-culture experiments.
+      \item The high-dose portion of the curve is a straight line.
+      \item This straight-line component correlates well with cell-culture experiments.
   \end{itemize}
-  \item <4-> Disadvantages:
+  \item Disadvantages:
   \begin{itemize}
-    \item <5-> The low-dose portion of the curve greatly underestimates cell kill.
-    \item <6-> Unlike the linear-quadratic model, the single-hit model is not based on a  molecular mechanism.
-    \item <7-> Unlike the linear-quadratic model, there is not a simple equation for “equivalent dose” given a daily fractionation schedule.
+    \item The low-dose portion of the curve greatly underestimates cell kill.
+    \item Unlike the linear-quadratic model, the single-hit model is not based on a  molecular mechanism.
+    \item Unlike the linear-quadratic model, there is not a simple equation for “equivalent dose” given a daily fractionation schedule.
   \end{itemize}
   \end{itemize}
 
@@ -251,14 +251,14 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-        \item<1-> A fractionated radiation survival curve has a shallower slope compared to a  single-fraction survival curve.
-	      \item<2-> Assuming complete repair in between fractions, the shoulder is repeated with  each fraction.
-	      \item <3-> $D_0$ versus effective $D_0$. When radiation is fractionated, you need much more dose to achieve the same amount of cell kill. Therefore, effective $D_0$ is always larger than $D_0$
+        \item A fractionated radiation survival curve has a shallower slope compared to a  single-fraction survival curve.
+	      \item Assuming complete repair in between fractions, the shoulder is repeated with  each fraction.
+	      \item $D_0$ versus effective $D_0$. When radiation is fractionated, you need much more dose to achieve the same amount of cell kill. Therefore, effective $D_0$ is always larger than $D_0$
 	\end{itemize}
     \end{column}
     \begin{column}{0.4\textwidth}
       \centering
-      \includegraphics<2->[width=\textwidth]{fractionation.png}
+      \includegraphics[width=\textwidth]{fractionation.png}
     \end{column}
   \end{columns}
 \end{frame}
@@ -271,14 +271,14 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-        \item<1-> The slope of a fractionated survival curve is called effective $D_0$.
-	      \item<2-> For a single fraction of $D$ Gy with a surviving fraction of $\text{SF}_D$:
+        \item The slope of a fractionated survival curve is called effective $D_0$.
+	      \item For a single fraction of $D$ Gy with a surviving fraction of $\text{SF}_D$:
 	      \begin{align*}
           \text{SF}_D &= e^{-D/D_0} \\
           \text{SF}_D &= e^{-D/\text{effective } D_0} \\
           \text{effective } D_0 &= -\frac{D}{\ln(\text{SF}_D)}
         \end{align*}
-	      \item <3-> After $x$ fractions to total dose $xD$ Gy: 
+	      \item After $x$ fractions to total dose $xD$ Gy: 
         $SF_x^D = e^{-xD/\text{effective } D_0}$
 	\end{itemize}
     \end{column}
@@ -293,12 +293,12 @@
 \begin{frame}
   \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
   \begin{itemize}
-    \item<1-> The linear-quadratic model was developed after the in vitro observation that  DNA damage follows a linear-quadratic relationship with dose D.
-    \item<2-> Lethal DNA aberrations = $\alpha D + \beta D^2$ = Cell Kill $$\boxed{SF_D = e^{-(\alpha D + \beta D^2)}}$$
-    \item<3-> Unlike the single-hit model, the LQ model accounts for two different types of  lethal hits which are based on known molecular mechanisms of DNA damage:
+    \item The linear-quadratic model was developed after the in vitro observation that  DNA damage follows a linear-quadratic relationship with dose D.
+    \item Lethal DNA aberrations = $\alpha D + \beta D^2$ = Cell Kill $$\boxed{SF_D = e^{-(\alpha D + \beta D^2)}}$$
+    \item Unlike the single-hit model, the LQ model accounts for two different types of  lethal hits which are based on known molecular mechanisms of DNA damage:
     \begin{itemize}
-      \item<4-> Single-hit kill ($\alpha$) is unrepairable damage and is \textbf{independent} of fractionation  or dose rate. This corresponds to single-hit and \textbf{intra}-track accumulated damage.
-      \item<5-> Multi-hit kill ($\beta$) is repairable damage and is \textbf{dependent} on fractionation  or dose rate. This corresponds to double-hit and \textbf{inter}-track accumulated damage.
+      \item Single-hit kill ($\alpha$) is unrepairable damage and is \textbf{independent} of fractionation  or dose rate. This corresponds to single-hit and \textbf{intra}-track accumulated damage.
+      \item Multi-hit kill ($\beta$) is repairable damage and is \textbf{dependent} on fractionation  or dose rate. This corresponds to double-hit and \textbf{inter}-track accumulated damage.
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -324,14 +324,14 @@
   \frametitle{Linear-Quadratic (LQ, Alpha-Beta) Model}
   \framesubtitle{Alpha-Beta Model and Dose Fractionation}
   \begin{itemize}
-    \item<1-> LQ model is widely used in radiotherapy to predict the effects of different fractionation schemes on both tumor and normal tissues.
-    \item<2-> Suppose we have $n$ no of fractions of dose $d$ each, then the total dose $D = nd$. The surviving fraction after $n$ fractions is given by:
+    \item LQ model is widely used in radiotherapy to predict the effects of different fractionation schemes on both tumor and normal tissues.
+    \item Suppose we have $n$ no of fractions of dose $d$ each, then the total dose $D = nd$. The surviving fraction after $n$ fractions is given by:
     \begin{align*}
       \text{SF}_n &= e^{-n(\alpha d + \beta d^2)} \\
       \implies - \frac{1}{nd} &= \frac{\alpha}{\ln(\text{SF}_n)} + \frac{\beta d}{ln(\text{SF}_n)} \\
     \end{align*}
-    \item<3-> Plot of dose per fraction $d$ versus $- \frac{1}{nd}$ gives a straight line with slope $\beta/ln(\text{SF}_n)$ and y-intercept $ln(\text{SF}_n)$. The ratio of intercept to slope gives $\alpha/\beta$.
-    \item<4-> Such values are obtained for a variety of tissues and tumors, and are used to guide clinical decision-making regarding fractionation schemes.
+    \item Plot of dose per fraction $d$ versus $- \frac{1}{nd}$ gives a straight line with slope $\beta/ln(\text{SF}_n)$ and y-intercept $ln(\text{SF}_n)$. The ratio of intercept to slope gives $\alpha/\beta$.
+    \item Such values are obtained for a variety of tissues and tumors, and are used to guide clinical decision-making regarding fractionation schemes.
   \end{itemize}
 \end{frame}
 
@@ -386,9 +386,9 @@
 
   \begin{block}{Give the recommendations about how to compensate for  unscheduled gaps in radiotherapy treatment.}
     \begin{enumerate}
-      \item<2-> The main recommendation is to compensate for a gap by  \textbf{continuing to deliver the same number of fractions in the same overall time}, by inserting the missed fractions (using the original dose per fraction) either during weekends or as extra fraction on previously treatment days.
-      \item<3-> When multiple fractions are given in a day, the interval between them should be \textbf{at least 6 hours}.
-      \item<4-> If the break in treatment occurs early in the schedule, then two fractions per day can be used. However, if there are not enough days left on the original schedule to catch up using two fractions on each remaining days, three fractions per day can be considered subjected to the availability of resources.
+      \item The main recommendation is to compensate for a gap by  \textbf{continuing to deliver the same number of fractions in the same overall time}, by inserting the missed fractions (using the original dose per fraction) either during weekends or as extra fraction on previously treatment days.
+      \item When multiple fractions are given in a day, the interval between them should be \textbf{at least 6 hours}.
+      \item If the break in treatment occurs early in the schedule, then two fractions per day can be used. However, if there are not enough days left on the original schedule to catch up using two fractions on each remaining days, three fractions per day can be considered subjected to the availability of resources.
     \end{enumerate}
    
   \end{block}
@@ -399,10 +399,10 @@
 \textbf{Question 1:} Which of the following remains unaltered while changing the plan from fractionated radiotherapy to brachytherapy?
 
 \begin{enumerate}
-    \item<1> Total Dose
-    \item<1> Dose per fraction
-    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries BED}}{BED}
-    \item<1> Relative effetiveness of that dose
+    \item Total Dose
+    \item Dose per fraction
+    \item \alt{\textcolor{CorrectGreen}{\bfseries BED}}{BED}
+    \item Relative effetiveness of that dose
 \end{enumerate}
 \end{frame}
 
@@ -411,10 +411,10 @@
 \textbf{Question 2:} A tumour containing $10^8$ cells is inactivated by radiation with a mean lethal dose of $D_0 = 1.8$ Gy. What is the number of surviving tumour cells after a radiation dose of 45 Gy?
 
 \begin{enumerate}
-    \item<1> $1.2 \times 10^{-3}$
-    \item<1> $1.4 \times 10^{-4}$
-    \item<1-2> \alt<2>{\textcolor{CorrectGreen}{\bfseries $1.4 \times 10^{-3}$}}{$1.4 \times 10^{-3}$}
-    \item<1> $1.2 \times 10^{-4}$
+    \item $1.2 \times 10^{-3}$
+    \item $1.4 \times 10^{-4}$
+    \item \alt{\textcolor{CorrectGreen}{\bfseries $1.4 \times 10^{-3}$}}{$1.4 \times 10^{-3}$}
+    \item $1.2 \times 10^{-4}$
 \end{enumerate}
 \begin{block}{Solution}<2->
     The number of surviving cells is given by:
@@ -488,11 +488,11 @@
   \begin{columns}
     \begin{column}{0.6\textwidth}
       \begin{itemize}
-    \item<1-> An empiric equation based on the Strandquist Plots:
+    \item An empiric equation based on the Strandquist Plots:
     \begin{itemize}
-      \item<2-> Back in the 1930s-1940s, Strandquist treated a bunch of skin cancers and  plotted radium exposure versus skin erythema, desquamation, necrosis, and tumor cure.
-      \item<3-> He found that the relationship between total dose and overall treatment time  formed a series of parallel lines on a logarithmic chart.
-      \item<4-> The Strandquist plots (approximate). These parallel lines represent various skin-related endpoints such as erythema, desquamation, and necrosis.
+      \item Back in the 1930s-1940s, Strandquist treated a bunch of skin cancers and  plotted radium exposure versus skin erythema, desquamation, necrosis, and tumor cure.
+      \item He found that the relationship between total dose and overall treatment time  formed a series of parallel lines on a logarithmic chart.
+      \item The Strandquist plots (approximate). These parallel lines represent various skin-related endpoints such as erythema, desquamation, and necrosis.
     \end{itemize}
   \end{itemize}
     \end{column}
@@ -507,11 +507,11 @@
   \frametitle{Nominal Standard Dose (NSD)}
   \framesubtitle{Continue}
   \begin{itemize}
-    \item<1-> Unlike newer models, the Ellis NSD has no theoretical basis whatsoever; it is an  empiric \textbf{“curve fitting”} model.
-    \item<2-> The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
-    \item<3-> The NSD makes no attempt to predict late toxicity.
-    \item<4-> There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
-    \item<5-> For $N$ fractions of total dose $D$(in rads) delivered over $T$ days:
+    \item Unlike newer models, the Ellis NSD has no theoretical basis whatsoever; it is an  empiric \textbf{“curve fitting”} model.
+    \item The NSD can accurately predict acute skin toxicity and skin cancer response  because that is where the data came from.
+    \item The NSD makes no attempt to predict late toxicity.
+    \item There are two versions of the equation: one with time and fractionation, another  with just fractionation. 
+    \item For $N$ fractions of total dose $D$(in rads) delivered over $T$ days:
     $$D = \text{NSD} \times N^{0.24} \times T^{0.11}$$
   \end{itemize}
 \end{frame}
@@ -520,9 +520,9 @@
 \begin{frame}
   \frametitle{Cumulative Radiation Effect (CRE)}
   \begin{itemize}
-    \item<1-> NSD formula does not say anything about tumor responce and normal tissue tolerace due to part of the treatment schedule which had already been completed, might have reached some level of tolerance. 
-    \item<2-> Kirk et. al. extended the NSD concept to the cumulative radiation effect (CRE) for such type of schedules. This is based on sub-tolerance of normal tissue which was subjected to irradiation.
-    \item<3-> The partial tolerances are additive in nature,
+    \item NSD formula does not say anything about tumor responce and normal tissue tolerace due to part of the treatment schedule which had already been completed, might have reached some level of tolerance. 
+    \item Kirk et. al. extended the NSD concept to the cumulative radiation effect (CRE) for such type of schedules. This is based on sub-tolerance of normal tissue which was subjected to irradiation.
+    \item The partial tolerances are additive in nature,
     $${PT} = \sum {PT}_i$$ 
   \end{itemize}
 \end{frame}
