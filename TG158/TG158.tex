@@ -1,0 +1,126 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+\usetheme{Madrid}
+\justifying
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+%Information to be included in the title page:
+\title[AAPM TG158] %optional
+{Reviewing TG158}
+\subtitle{Measurement and calculation of doses outside the treated volume from EBRT}
+
+
+\author[Souvik Das] % (optional)
+{\includegraphics[height=2cm]{Tata_Memorial_Center_logo.jpg} \\ Souvik Das}
+\institute[] % (optional)
+{
+  Resident Medical Physicist\\
+  Tata Memorial Hospital, Mumbai
+}
+
+\date[\today] % (optional)
+
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+% %------------------------------------------------------------
+
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Table of Contents}
+\setcounter{tocdepth}{2}
+\tableofcontents[]
+\end{frame}
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+% 
+%---------------------------------------------------------
+\section{Introduction}
+\begin{frame}
+  \frametitle{What is outfield dosimetry}
+  \begin{itemize}
+    \item Improved conformality has not mitigated the problem of doses to normal tissues outside the treated volume.
+    \item With modern treatment planning systems, high-dose regions and areas within the primary-beam path are typically well described.However, the accuracy of dose determinations beyond a few centimeters outside the treatment field edge is usually poor. 
+    \item The dose outside the PTV is referred to as “nontarget dose.”
+    \item Nontarget dose is delivered by nontarget radiation and can be subdivided into two categories
+    \begin{tabular}{p{2cm}|p{8cm}}
+      \hline
+      Term & Definition \\
+      \hline \hline
+      In-field & within a \textcolor{blue}{primary field border}, such as entrance and exit dose along the beam path. \\
+      \hline
+      Out-of-field & not only \textcolor{blue}{outside of the PTV but also outside of any primary field edge} — dose deposited by stray, or secondary, radiation. \\
+      \hline
+    \end{tabular}
+    
+  \end{itemize}
+\end{frame}
+
+
+
+%---------------------------------------------------------
+% 
+%---------------------------------------------------------
+\begin{frame}
+  \frametitle{What is outfield dosimetry}
+  \framesubtitle{Nontarget dose classification}
+  \begin{itemize}
+    \item Nontarget dose can be classified as one of three approximate dose levels. \cite{kry_span_2017}
+    \begin{tabular}{p{2cm}|p{8cm}}
+      \hline
+      Dose & Definition \\
+      \hline \hline
+      High doses & \textcolor{blue}{($>$ 30 Gy or $>$ 50\% of the prescription dose)} are typically directly optimized during the planning process. \\
+      \hline
+      Intermediate doses & \textcolor{blue}{(3 - 30 Gy or 5-50\% of the prescription dose)} are also often addressed during optimization but are not generally the focus of the treatment plan \\
+      \hline
+      Low doses & \textcolor{blue}{($<$ 3 Gy or $<$ 5\% of the prescription dose)} are typically not considered during optimization and are often poorly modeled by the TPS. \\
+      \hline
+    \end{tabular}
+  \end{itemize}
+\end{frame}
+
+
+%---------------------------------------------------------
+\begin{frame}[allowframebreaks]
+    \frametitle{References}
+    \bibliographystyle{unsrturl}
+    \bibliography{MyProject.bib}
+\end{frame}
+%---------------------------------------------------------
+
+
+
+
+
+\end{document}

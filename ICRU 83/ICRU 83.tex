@@ -1,0 +1,74 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\justifying
+\usepackage{xcolor}
+\definecolor{CorrectGreen}{RGB}{0,100,0} % Dark Green
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+%Information to be included in the title page:
+\title[ICRU 83] %optional
+{Reviewing ICRU 83}
+\subtitle{PRESCRIBING, RECORDING, AND REPORTING PHOTON-BEAM INTENSITY-MODULATED RADIATION THERAPY (IMRT)}
+
+
+\author[Souvik Das] % (optional)
+{\includegraphics[height=2cm]{Tata_Memorial_Center_logo.jpg} \\ Souvik Das}
+\institute[] % (optional)
+{
+  Resisdent Medical Physicist\\
+  Tata Memorial Hospital, Mumbai
+}
+
+\date[August 3, 2026] % (optional)
+
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+\frametitle{Table of Contents}
+\setcounter{tocdepth}{2}
+\tableofcontents[]
+\end{frame}
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+% 
+%---------------------------------------------------------
+
+
+
+\end{document}
