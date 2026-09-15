@@ -1,9 +1,24 @@
 \begin{thebibliography}{1}
 
-\bibitem{howell_accuracy_2010}
-Rebecca~M Howell, Sarah~B Scarboro, S~F Kry, and Derek~Z Yaldo.
-\newblock Accuracy of out-of-field dose calculations by a commercial treatment
-  planning system.
-\newblock {\em Phys. Med. Biol.}, 55(23):6999, November 2010.
+\bibitem{huang_accuracy_2013}
+Jessie~Y. Huang, David~S. Followill, Xin~A. Wang, and Stephen~F. Kry.
+\newblock Accuracy and sources of error of out-of field dose calculations by a
+  commercial treatment planning system for intensity-modulated radiation
+  therapy treatments.
+\newblock {\em Journal of Applied Clinical Medical Physics}, 14(2):186--197,
+  2013.
+
+\bibitem{kry_span_2017}
+Stephen~F. Kry, Bryan Bednarz, Rebecca~M. Howell, Larry Dauer, David Followill,
+  Eric Klein, Harald Paganetti, Brian Wang, Cheng‐Shie Wuu, and X.~George~Xu.
+\newblock {TG} 158: {Measurement} and calculation of doses outside the treated
+  volume from external‐beam radiation therapy.
+\newblock {\em Medical Physics}, 44(10), October 2017.
+
+\bibitem{kry_neutron_2009}
+Stephen~F. Kry, Rebecca~M. Howell, Mohammad Salehpour, and David~S. Followill.
+\newblock Neutron spectra and dose equivalents calculated in tissue for
+  high-energy radiation therapy.
+\newblock {\em Medical Physics}, 36(4):1244--1250, 2009.
 
 \end{thebibliography}

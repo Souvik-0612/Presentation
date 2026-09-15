@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{ragged2e}
+\usepackage[numbers]{natbib}
 \usetheme{Madrid}
 \justifying
 
@@ -66,25 +67,43 @@
 % 
 %---------------------------------------------------------
 \section{Introduction}
+
+\begin{frame}
+  \frametitle{TG-158: non-target doses}
+  The report aims to address the following,
+  \begin{itemize}
+    \item Highlight major concerns of nontarget dose
+    \item Provide a rough estimate of doses associated with different treatment approaches in clinical practice
+    \item Discuss the uses of dosimeters and phantoms for measuring photon, electron, and neutron exposures
+    \item Discuss the use of calculation techniques (including  Monte Carlo) for dosimetric evaluations
+    \item Highlight techniques that may be considered for reducing nontarget doses
+    \item Discuss dose reporting
+    \item Make recommendations for clinical and research practice
+  \end{itemize}
+\end{frame}
+
 \begin{frame}
   \frametitle{What is outfield dosimetry}
   \begin{itemize}
-    \item Improved conformality has not mitigated the problem of doses to normal tissues outside the treated volume.
-    \item With modern treatment planning systems, high-dose regions and areas within the primary-beam path are typically well described.However, the accuracy of dose determinations beyond a few centimeters outside the treatment field edge is usually poor. 
-    \item The dose outside the PTV is referred to as “nontarget dose.”
+    \justifying
+    \item Improved conformality has not mitigated the problem of doses to normal tissues outside the treated volume. With modern treatment planning systems, high-dose regions and areas within the primary-beam path are typically well described.
+    \item However, the accuracy of dose determinations beyond a few centimeters outside the treatment field edge is usually poor. \cite{huang_accuracy_2013}
+    \item The dose outside the PTV is referred to as \textcolor{red}{“nontarget dose”}.
     \item Nontarget dose is delivered by nontarget radiation and can be subdivided into two categories
+    \begin{table}
     \begin{tabular}{p{2cm}|p{8cm}}
-      \hline
+      \hline\hline
       Term & Definition \\
-      \hline \hline
+      \hline 
       In-field & within a \textcolor{blue}{primary field border}, such as entrance and exit dose along the beam path. \\
       \hline
       Out-of-field & not only \textcolor{blue}{outside of the PTV but also outside of any primary field edge} — dose deposited by stray, or secondary, radiation. \\
-      \hline
+      \hline\hline
     \end{tabular}
-    
+    \end{table}
   \end{itemize}
 \end{frame}
+
 
 
 
@@ -95,27 +114,209 @@
   \frametitle{What is outfield dosimetry}
   \framesubtitle{Nontarget dose classification}
   \begin{itemize}
-    \item Nontarget dose can be classified as one of three approximate dose levels. \cite{kry_span_2017}
+    \item Nontarget dose can be classified as one of three approximate dose levels \cite{kry_span_2017}.
     \begin{tabular}{p{2cm}|p{8cm}}
-      \hline
+      \hline\hline
       Dose & Definition \\
-      \hline \hline
+      \hline 
       High doses & \textcolor{blue}{($>$ 30 Gy or $>$ 50\% of the prescription dose)} are typically directly optimized during the planning process. \\
       \hline
       Intermediate doses & \textcolor{blue}{(3 - 30 Gy or 5-50\% of the prescription dose)} are also often addressed during optimization but are not generally the focus of the treatment plan \\
       \hline
       Low doses & \textcolor{blue}{($<$ 3 Gy or $<$ 5\% of the prescription dose)} are typically not considered during optimization and are often poorly modeled by the TPS. \\
-      \hline
+      \hline\hline
     \end{tabular}
   \end{itemize}
 \end{frame}
 
 
 %---------------------------------------------------------
+% 
+%---------------------------------------------------------
+\begin{frame}
+  \frametitle{What is outfield dosimetry}
+  \framesubtitle{The motivation}
+  The risk of late effects from the secondary radiation maybe more evident today than the past becuase of the success of cancer screening and modern therapies have increased the number of cancer patients who survive and live long enough for the adverse radiation effects on healthy tissues to manifest.
+  \newline
+  
+  So, it is the \textcolor{red}{physicist's responsibility to appropiately determine relevent nontarget doses and contribute to strategies to minimize those doses as needed}.
+
+\end{frame}
+
+\section{Concerns with respect to nontarget radiation}
+\begin{frame}
+  \frametitle{Concerns with respect to nontarget radiation}
+  \begin{tabular}{p{2cm}|p{9cm}}
+    \hline\hline
+    Secondary cancers & The thyroid and female breast, for example, are very sensitive to radiation-induced cancer in young patients, but by late adulthood are relatively insensitive to radiation \\ \hline
+    Cardiac toxicity & \begin{itemize} \justifying
+      \item Cancer survivors have a have higher risk of several cardiac effects than the healthy population, including myocardial infarction, pericardial disease, and valvular dysfunction.
+      \item The mortality ratio for patients with a left breast cancer compared with those with a right breast cancer increased from 1.04 at $<$ 5 yr post-treatment to 1.53 at $>$ 15 yr post-treatment. 
+    \end{itemize} \\ \hline 
+    
+  \end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Concerns with respect to nontarget radiation}
+  \begin{tabular}{p{2cm}|p{9cm}}
+    \hline
+    Implantable electronic devices & Implantable electronic devices, if exposed to excessive cumulative doses, can malfunction as a result of a build-up of electrical charge (typically at doses $>$ 2 Gy)(e.g., pacemakers) \\ \hline
+    Fetal dose & Fetal radiation exposure may cause many adverse effects at doses as low as \textcolor{red}{10 cGy}, as described in AAPM Report TG-36. Radiotherapy treatment of pregnant patients is occasionally unavoidable. \\ \hline 
+    Cataracts & While the current guidelines for the threshold dose for cataract formation ranges from 2 to 5 Gy, recent studies indicate that the dose could be less than \textcolor{red}{0.5 Gy}. The studies have indicated that very low doses can lead to cataract formation 25 yr or more after exposure. \\ \hline \hline
+
+  \end{tabular}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Sources and description of out-of-field dose}
+  \framesubtitle{Unintended sources of radiation in LINAC}
+  \begin{table}
+    \centering
+    \begin{tabular}{p{2cm}|p{9cm}}
+      \hline\hline
+      Source & Description \\
+      \hline 
+      Patient scatter & Scatter of the primary treatment beam outside the treatment area once it has entered the patient. \textbf{Close proximity} to the treated volume, the dominant source.\\ \hline
+      Collimator scatter & Scatter of radiation in the head of the accelerator that exits the accelerator through the treatment field opening but strikes the patient outside the treatment field \\ \hline
+      Head leakage & Radiation that penetrates through the accelerator head shielding and strikes the patient away from the treatment field. At \textbf{greater distances} from the field edge greater than $\approx$20 cm, dominant source of out-offield dose. \\ \hline\hline
+      
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Sources and description of out-of-field dose}
+  \framesubtitle{Dependency of outside-field dose}
+  \begin{table}
+    \centering
+    \begin{tabular}{p{2cm}|p{9cm}}
+      \hline\hline
+      Dependency & Description \\
+      \hline 
+      Field size & This field-size dependence is most pronounced close to the field edge, where patient scattered radiation is the most important component of the out-of-field dose. Farther from the field edge, there is less field size dependence because this dose is dominated by head leakage\\ \hline
+      Modulated treatments & The dose increas limator scatter is generated as the number of monitor units (MU) increases to deliver the modulated fields. \\ \hline\hline
+      
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Sources and description of out-of-field dose}
+  \framesubtitle{Neutron production}
+      \begin{itemize}
+        \justifying
+        \item When beam energies exceed 10 MV, neutron production in the head of the accelerator becomes relevant.
+        \item The jaws or multileaf collimators (MLC) can also be a major source of neutrons when they intersect the primary photon beam (such as for a closed field).
+        \item Neutron production in the patient is negligible because of the \textcolor{blue}{low ($\lambda$,n) cross section} for the low-atomic number materials that constitute tissue.
+        \item Neutron production in the accelerator head results in \textcolor{cyan}{isotropic} neutron emissions, exposing the patient to a relatively uniform bath of neutrons. The fluence of neutrons and associated \textcolor{cyan}{dose equivalents increase linearly with the number of MU delivered}.
+	\end{itemize}    
+\end{frame}
+
+
+
+
+\begin{frame}
+  \frametitle{Sources and description of out-of-field dose}
+  \framesubtitle{Neutron production}
+   \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \justifying
+        \item Secondary neutron spectra measured in air in the patient plane are shown and include a fast neutron peak centered between \textcolor{teal}{0.1 and 1 MeV}, a maximum energy of approximately 10 MeV, and a low-energy tail that arises from neutrons being elastically scattered throughout the treatment vault.
+        \item Varian accelerators generate approximately twice as many neutrons as Siemens or Elekta accelerators because they \textcolor{red}{have a higher peak photon energy} for the same nominal beam energy.
+	\end{itemize}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      
+      \begin{figure}
+      \centering
+      \includegraphics[width=\textwidth]{Photos/NeutronSpectrum.png}
+      \end{figure}
+      \begin{itemize}
+        \justifying
+        \item For a Varian accelerator, the number of neutrons increases by $\sim$10 times from 10 MV to 15 MV and by $\sim$2 times from 15 MV to 18 MV.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+    
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Sources and description of out-of-field dose  }
+  \framesubtitle{Neutron dose deposition}
+   \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \justifying
+        \item The majority of neutron dose equivalent is deposited by fast neutrons.
+        \item Once neutrons strike the patient, they are rapidly thermalized and therefore show a sharp decrease in dose equivalent with increasing depth.
+        \item The neutron percent depth dose equivalent (PDDE) decreases by \textcolor{blue}{approximately 20\% per centimeter penetration in tissue} \cite{kry_neutron_2009}, and because the spectrum does not change, these data are a good estimate of the out-of-field PDDE for any distance, field size, or SSD.
+	\end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{table}
+        \centering
+        \begin{tabular}{c | c}
+          \hline\hline
+          Depth (cm) & PDDE (\%) \\ \hline 
+          0.1 & 100 \\
+          1   & 80.2 \\
+          2   & 59.8 \\
+          3   & 42.9 \\
+          4   & 30.7 \\
+          5   & 22.2 \\
+          6   & 16.3 \\
+          7   & 11.9 \\
+          8   & 8.8 \\
+          9   & 6.8 \\
+          10  & 5.3 \\
+          12  & 3.1 \\
+          15  & 1.5 \\
+          20  & 0.6 \\ \hline \hline
+        \end{tabular}
+      \end{table}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%---------------------------------------------------------
 \begin{frame}[allowframebreaks]
     \frametitle{References}
-    \bibliographystyle{unsrturl}
-    \bibliography{MyProject.bib}
+    \bibliographystyle{unsrt}
+    \bibliography{MyProject}
 \end{frame}
 %---------------------------------------------------------
 
