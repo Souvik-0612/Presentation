@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{noauthor_aapm_nodate}
+{AAPM} {TG} 191: {Clinical} use of luminescent dosimeters: {TLDs} and {OSLDs} -
+  {Kry} - 2020 - {Medical} {Physics} - {Wiley} {Online} {Library}.
+
+\bibitem{kry_span_2017}
+Stephen~F. Kry, Bryan Bednarz, Rebecca~M. Howell, Larry Dauer, David Followill,
+  Eric Klein, Harald Paganetti, Brian Wang, Cheng‐Shie Wuu, and X.~George~Xu.
+\newblock {AAPM} {TG}158: {Measurement} and calculation of doses outside the
+  treated volume from external‐beam radiation therapy.
+\newblock {\em Medical Physics}, 44(10), October 2017.
+
+\bibitem{scarboro_variations_2011}
+Sarah~B. Scarboro, David~S. Followill, Rebecca~M. Howell, and Stephen~F. Kry.
+\newblock Variations in photon energy spectra of a 6 {MV} beam and their impact
+  on {TLD} response.
+\newblock {\em Medical Physics}, 38(5):2619--2628, 2011.
+
+\bibitem{kry_out--field_2010}
+Stephen~F. Kry, Oleg~N. Vassiliev, and Radhe Mohan.
+\newblock Out-of-field photon dose following removal of the flattening filter
+  from a medical accelerator.
+\newblock {\em Physics in Medicine and Biology}, 2010.
+
+\bibitem{howell_accuracy_2010}
+Rebecca~M Howell, Sarah~B Scarboro, S~F Kry, and Derek~Z Yaldo.
+\newblock Accuracy of out-of-field dose calculations by a commercial treatment
+  planning system.
+\newblock {\em Physics in Medicine \& Biology}, 55(23):6999, November 2010.
+
+\end{thebibliography}

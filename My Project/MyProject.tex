@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{ragged2e}
+\usepackage[numbers]{natbib}
 
 \usetheme{Madrid}
 \usecolortheme{default}
@@ -38,14 +39,14 @@
 %The next block of commands puts the table of contents at the 
 %beginning of each section and highlights the current section:
 
-\AtBeginSection[]
-{
-  \begin{frame}
-    \frametitle{Table of Contents}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-%------------------------------------------------------------
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+% %------------------------------------------------------------
 
 
 \begin{document}
@@ -135,13 +136,97 @@
 \begin{frame}
   \frametitle{Which Luminescence Dosimeter(LD)?}
   See
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{Photos/TLDs.png}
+    \caption{\cite{noauthor_aapm_nodate}}
+  \end{figure}
+\end{frame}
+  
+
+\begin{frame}
+  \frametitle{Dose at the surface}
+  \begin{itemize}
+    \justifying
+    \item Outside the treatment field, the  dose at the surface is increased by \textbf{stray electrons}, so there is a build-down effect instead of a build-up effect near the surface.
+    \item The dose is elevated by a factor of as much as 5 at the patient surface, and decreases to a depth of approximately $d_{max}$, below which the dose becomes approximately constant with depth
+    \item Therefore, if a dosimeter is placed on the patient surface, it will overestimate the dose (by a factor of as much as 5) unless a very superficial dose estimate is desired. If a superficial dose estimate is not desired, the dosimeter should be covered by bolus of a thickness of approximately $d_{max}$(For halcyon $d_{max}$ = 1.3 cm). \cite{kry_span_2017}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Energy spectrum}
+  \begin{itemize}
+    \justifying
+    \item The average energy is much lower  outside the treatment field (mean photon energy as low as 0.20 MeV).
+    \item If the dosimeter's calibration is done in the harder, primary beam (mean photon energy ~1.5 MeV for a 6 MV beam), a dosimeter with a higher effective atomic number than tissue will overrespond to this softer radiation.
+    \item While this means that measurements will tend to be conservative overestimates, this effect must at least be known, and can be sizeable to the point of unacceptable accuracy unless it is accounted for.
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{At 6 MV, TLD-100 over-responds by 4-12\% increasing with greater distances from the field edge.}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{Photos/TLD reponse on 6MV outside field.png}
+    \caption{\cite{scarboro_variations_2011}}
+  \end{figure}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Monte Carlo study}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{Photos/Outside field dose for unflatten beam.png}
+    \caption{\cite{kry_out--field_2010}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Howell's study \cite{howell_accuracy_2010}}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{Photos/AtomPhantom.png}
+    \caption{The inferior edge of the mantle fields abutted the superior border of slice 20 of the phantom.  \cite{howell_accuracy_2010}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Howell's study}
+  \framesubtitle{continued}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Photos/DoseDistribution.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Howell's study}
+  \framesubtitle{continued}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{Photos/Axial.png}
+    \caption{A total of 30 Gy was delivered to the treatment isocenter in a single irradiation using 6 MV photons. This corresponded to a range of doses to the \textbf{LiF TLD-100} of 50-500 cGy.}
+  \end{figure}
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{Howell's study}
+  \framesubtitle{continued}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{Photos/Measurment.png}
+  \end{figure}
+\end{frame}
 
-
-
-
+%---------------------------------------------------------
+\begin{frame}[allowframebreaks]
+    \frametitle{References}
+    \bibliographystyle{unsrt}
+    \bibliography{MyProject}
+\end{frame}
+%---------------------------------------------------------
 
 
 \end{document}
